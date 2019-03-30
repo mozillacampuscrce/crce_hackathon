@@ -11,5 +11,7 @@ class Query:
     def check_hypothesis(self,text,hypothseis):
         predict = predictor.predict(hypothesis= text,premise=hypothseis)
         return predict['label_probs']
-
-    print(ask_question("Marijuana is legal in Thailand and India","Marijuana is legal in which countries"))
+        
+if __name__ == '__main__':
+    x = Query()
+    print(x.ask_question("Marijuana is legal in Thailand and India","Marijuana is legal in which countries"))
